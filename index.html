@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Dark Souls for Travellers</title>
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1" />
+	
+	<script type="text/javascript" src="jquery.zoomooz.min.js"></script>
+	<script src="ios-orientationchange-fix.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+	
+	<link rel="stylesheet" href="colorbox-assets/colorbox.css" /> <!-- important -->
+	<link rel="stylesheet" href="assets/css/minimap.alt.css" />
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/emojione/1.3.0/assets/css/emojione.min.css"/>
+	<link rel="stylesheet" href="./assets/css/styles.css" />
+	
+	<script src="assets/js/minimap.js"></script>
+    <script src="assets/js/toolitup-minimap.min.js"></script>
+	<script type="text/javascript" src="jquery.imagemapster.js"></script>
+	<script src="colorbox-assets/jquery.colorbox.js"></script>
+	<script src="https://www.w3schools.com/lib/w3data.js"></script>
+	
+<!-- 	<!-- tooltip -->
+	<script src="tooltip-assets/jquery.toolbar.js"></script>
+	<link href="tooltip-assets/jquery.toolbar.css" rel="stylesheet" />
+	<!-- ends -->
+
+	
+	<script>
+		$(document).ready(function(){
+			//Examples of how to assign the Colorbox event to elements
+			$(".youtube").colorbox({iframe:true, innerWidth:1024, innerHeight:576});
+			$(".start").colorbox({iframe:true, innerWidth:640, innerHeight:576});
+			});
+	</script>
+
+	<style>
+	img {
+  max-width: 100%;
+  display: block;
+	}
+	display: block
+	.nospace {
+   font-size: 0;
+	}
+	img[usemap] {
+		border: none;
+		height: auto;
+		max-width: 100%;
+		width: auto;
+	}
+	html, body, figure { 
+		padding: 0;
+		margin: 0;
+	}
+	
+	.tooltip {
+	display:none;
+	opacity: 1%;
+	position:absolute;
+	border:0px solid #333;
+	<!-- background-color:#161616; -->
+	border-radius: 0px;
+	padding:5px;
+	color:#ffffff;
+	font-size:18px Minion Pro;
+	} 
+	
+	#myimage {
+    filter: brightness(1%);
+}
+</style>
+	
+</head>
+<body>
+<div id="toolbar-options">
+<img src="assets/image/day/01.gif" usemap="#map01" id="img_id01"/>
+<img src="assets/image/day/02.gif" usemap="#map02" id="img_id02"/>
+<img src="assets/image/day/03.gif" usemap="#map03" id="img_id03"/>
+<img src="assets/image/day/04.gif" usemap="#map04" id="img_id04"/>
+<img src="assets/image/day/05.gif" usemap="#map05" id="img_id05"/>
+<img src="assets/image/day/06.gif" usemap="#map06" id="img_id06"/>
+<img src="assets/image/day/07.gif" usemap="#map07" id="img_id07"/>
+<img src="assets/image/day/08.gif" usemap="#map08" id="img_id08"/>
+<img src="assets/image/day/09.gif" usemap="#map09" id="img_id09"/>
+<img src="assets/image/day/10.gif" usemap="#map10" id="img_id10"/>
+<img src="assets/image/day/11.gif" usemap="#map11" id="img_id11"/>
+<img src="assets/image/day/12.gif" usemap="#map12" id="img_id12"/>
+<img src="assets/image/day/13.gif" usemap="#map13" id="img_id13"/>
+<img src="assets/image/day/14.gif" usemap="#map14" id="img_id14"/>
+<img src="assets/image/day/15.gif" usemap="#map15" id="img_id15"/>
+<img src="assets/image/day/16.gif" usemap="#map16" id="img_id16"/>
+<img src="assets/image/day/17.gif" usemap="#map17" id="img_id17"/>
+<img src="assets/image/day/18.gif" usemap="#map18" id="img_id18"/>
+<img src="assets/image/day/19.gif" usemap="#map19" id="img_id19"/>
+<img src="assets/image/day/20.gif" usemap="#map20" id="img_id20"/>
+<img src="assets/image/day/21.gif" usemap="#map21" id="img_id21"/>
+<img src="assets/image/day/22.gif" usemap="#map22" id="img_id22"/>
+<img src="assets/image/day/23.gif" usemap="#map23" id="img_id23"/>
+<img src="assets/image/day/24.gif" usemap="#map24" id="img_id24"/>
+<img src="assets/image/day/25.gif" usemap="#map25" id="img_id25"/>
+<img src="assets/image/day/26.gif" usemap="#map26" id="img_id26"/>
+<img src="assets/image/day/27.gif" usemap="#map27" id="img_id27"/>
+<img src="assets/image/day/28.gif" usemap="#map28" id="img_id28"/>
+
+<div style="position: absolute; bottom: -300px; left: 10px;" class="shoutbox" >
+            
+            <h1>Shout box <img src='./assets/img/refresh.png'/></h1>
+            
+            <ul class="shoutbox-content"></ul>
+            
+            <div class="shoutbox-form">
+                <h2>Orange soapstone <span>×</span></h2>
+                
+                <form action="./publish.php" method="post">
+                    <label for="shoutbox-name">nickname </label> <input type="text" id="shoutbox-name" name="name"/>
+                    <label class="shoutbox-comment-label" for="shoutbox-comment">message </label> <textarea id="shoutbox-comment" name="comment" maxlength='240'></textarea>
+                    <input type="submit" value="Write""/>
+                </form>
+            </div>
+        </div>
+
+<map name="map01" id="img_id01">
+<area class="link" coords="3503,673,359" shape="circle" href="index-afternoon.html"  target="_parent" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id01').src= 'assets/image/logo-sun/day.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id01').src= 'assets/image/day/01.gif';"  />
+<area class="link" alt="kotaku" title="kotaku" href="http://kotaku.com/lordran-the-setting-of-dark-souls-almost-entirely-red-1682735168" coords="26,270,956,87" shape="rect" target="_blank" style="outline:none;"/>
+<area class="link" alt="facebook" title="facebook" href="https://www.facebook.com/tettix/" coords="276,488,58,313" shape="rect" target="_blank" style="outline:none;"/>
+<area class="link" alt="website" title="website" href="http://tettix.net/lordran/lordran.html" coords="388,599,50,520" shape="rect" target="_blank" style="outline:none;"/>
+</map>
+
+<map name="map02" id="img_id02">
+<area class="youtube" coords="1238,147,1381,24" shape="rect" href="http://www.youtube.com/embed/BBqkap40QAo" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id02').src= 'assets/image/text/day/02.gif'; PlaySound('02');" 
+onmouseout="if(document.images) document.getElementById('img_id02').src= 'assets/image/day/02.gif'; StopSound('02');"  />
+</map>
+
+<map name="map05" id="img_id05">
+<area class="youtube" coords="2224,143,2308,277" shape="rect" href="http://www.youtube.com/embed/ipsKKb-o334" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id05').src= 'assets/image/text/day/05.gif'; PlaySound('giant');" 
+onmouseout="if(document.images) document.getElementById('img_id05').src= 'assets/image/day/05.gif'; StopSound('giant');"  />
+
+<area class="youtube" coords="2653,95,2872,257" shape="rect" href="http://www.youtube.com/embed/my-yq5xf8YY" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id05').src= 'assets/image/text/day/05os.gif'; PlaySound('05os');" 
+onmouseout="if(document.images) document.getElementById('img_id05').src= 'assets/image/day/05.gif'; StopSound('05os'); PlaySound('05os-stop');"  />
+
+<area class="youtube" coords="2757,345,2836,447" shape="rect" href="http://www.youtube.com/embed/Lm_9tk0h9hM" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id05').src= 'assets/image/text/day/05gwyn.gif'; PlaySound('05gwyn');" 
+onmouseout="if(document.images) document.getElementById('img_id05').src= 'assets/image/day/05.gif'; StopSound('05gwyn');" />
+</map>
+
+<map name="map07" id="img_id07">
+<area class="youtube" coords="1107,178,1171,253" shape="rect" href="https://www.youtube.com/embed/ZzcA_G5ujGk" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id07').src= 'assets/image/text/day/07.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id07').src= 'assets/image/day/07.gif';"  />          
+
+<area class="youtube" coords="1922,150,2006,265" shape="rect" href="http://www.youtube.com/embed/nNhrS2hEicc" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id07').src= 'assets/image/text/day/07golem.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id07').src= 'assets/image/day/07.gif';"  />
+
+<area class="youtube" coords="2391,91,2566,198" shape="rect" href="http://www.youtube.com/embed/mO5Bbr9D4J0" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id07').src= 'assets/image/text/day/07guardian.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id07').src= 'assets/image/day/07.gif';"  />
+
+<area class="youtube" coords="3707,47,3862,150" shape="rect" href="http://www.youtube.com/embed/asDH5OBHT9o" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id07').src= 'assets/image/text/day/07sif.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id07').src= 'assets/image/day/07.gif';"  />
+</map>
+
+<map name="map09" id="img_id09">
+<area class="youtube" coords="1604,214,1676,301" shape="rect" href="https://www.youtube.com/embed/AEix6sRiAL4" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id09').src= 'assets/image/text/day/09.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id09').src= 'assets/image/day/09.gif';"  />
+
+<area class="youtube" coords="2391,158,2590,273" shape="rect" href="http://www.youtube.com/embed/cSkbH8fVvpk" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id09').src= 'assets/image/text/day/09butterfly.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id09').src= 'assets/image/day/09.gif';"  />
+</map>
+
+<map name="map10" id="img_id10">
+<area class="youtube" coords="1222,75,1302,150" shape="rect" href="http://www.youtube.com/embed/cdliu3JOSYQ" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id10').src= 'assets/image/text/day/10.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id10').src= 'assets/image/day/10.gif';"  />
+
+<area class="youtube" coords="3476,4,3647,107" shape="rect" href="http://www.youtube.com/embed/YkKWdrdxngo" style="outline:none;" 
+onmouseover="if(document.images) document.getElementById('img_id10').src= 'assets/image/text/day/10taurus.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id10').src= 'assets/image/day/10.gif';"  />
+</map>
+
+<map name="map11" id="img_id11">
+<area class="youtube" coords="801,75,884,0" shape="rect" href="http://www.youtube.com/embed/4enuU8R8Iuk" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id11').src= 'assets/image/text/day/11.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id11').src= 'assets/image/day/11.gif';"  />
+
+<area class="youtube" coords="984,79,1135,186" shape="rect" href="http://www.youtube.com/embed/eQx-j0aklhE" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id11').src= 'assets/image/text/day/11bell.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id11').src= 'assets/image/day/11.gif';"  />
+</map>
+
+<map name="map12" id="img_id12">
+<area class="youtube" coords="1497,52,1588,128" shape="rect" href="http://www.youtube.com/embed/GPbUA6dCR8k" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id12').src= 'assets/image/text/day/12.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id12').src= 'assets/image/day/12.gif';"  />
+
+<area coords="3878,24,3957,96" shape="rect" style="outline:none;"
+onmouseover= class="start" href="https://www.youtube.com/embed/skV-q5KjrUA" "if(document.images) document.getElementById('img_id12').src= 'assets/image/text/day/12solaire-ani.gif'; PlaySound('solaire');"
+onmouseout="if(document.images) document.getElementById('img_id12').src= 'assets/image/day/12.gif'; StopSound('solaire'); PlaySound('solaire-stop');" 
+onmousedown= class="youtube" href="https://www.youtube.com/embed/skV-q5KjrUA"/>
+</map> 
+
+<map name="map14" id="img_id14">
+<area class="youtube" coords="2407,99,2467,171" shape="rect" href="http://www.youtube.com/embed/aRgHcTNfKAw" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id14').src= 'assets/image/text/day/14.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id14').src= 'assets/image/day/14.gif';"  />
+
+<area class="youtube" coords="3266,28,3421,123" shape="rect" href="http://www.youtube.com/embed/hkq1myppcok" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id14').src= 'assets/image/text/day/14capra.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id14').src= 'assets/image/day/14.gif';"  />
+</map>
+
+<map name="map15" id="img_id15">
+<area class="youtube" coords="2157,28,2363,143" shape="rect" href="http://www.youtube.com/embed/afee2HDyTnA" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id15').src= 'assets/image/text/day/15.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id15').src= 'assets/image/day/15.gif';"  />
+</map>
+
+<map name="map17" id="img_id17">
+<area class="youtube" coords="2220,55,2335,166" shape="rect" href="http://www.youtube.com/embed/D6DDrwH0OvU" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id17').src= 'assets/image/text/day/17kalameet.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id17').src= 'assets/image/day/17.gif';"  />
+
+<area class="youtube" coords="3170,135,3353,238" shape="rect" href="http://www.youtube.com/embed/kVk4vtLEEV8" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id17').src= 'assets/image/text/day/17.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id17').src= 'assets/image/day/17.gif';"  />
+</map>
+
+<map name="map19" id="img_id19">
+<area class="youtube" coords="1672,103,1966,269" shape="rect" href="https://www.youtube.com/embed/eRbZVx6SuOE" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id19').src= 'assets/image/text/day/19.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id19').src= 'assets/image/day/19.gif';"  />
+</map>
+
+<map name="map21" id="img_id21">
+<area class="youtube" coords="2387,179,2518,358" shape="rect" href="http://www.youtube.com/embed/CtR-7_XqJew" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id21').src= 'assets/image/text/day/21.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id21').src= 'assets/image/day/21.gif';"  />
+</map>
+	
+<map name="map22" id="img_id22">
+<area class="youtube" coords="984,32,1063,104" shape="rect" href="http://www.youtube.com/embed/ioSArdWOWMA" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id22').src= 'assets/image/text/day/22.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id22').src= 'assets/image/day/22.gif';"  />
+
+<area class="youtube" coords="1485,96,1604,208" shape="rect" href="https://www.youtube.com/embed/7eJeUG1m6eI" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id22').src= 'assets/image/text/day/22pinwheel.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id22').src= 'assets/image/day/22.gif';"  />
+
+<area class="youtube" coords="3349,144,3584,264" shape="rect" href="http://www.youtube.com/embed/hdS2hW5Iiq4" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id22').src= 'assets/image/text/day/22firesage.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id22').src= 'assets/image/day/22.gif';"  />
+</map>
+
+<map name="map23" id="img_id23">
+<area class="youtube" coords="1954,12,2125,115" shape="rect" href="http://www.youtube.com/embed/Lp_VHdSdhg0" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id23').src= 'assets/image/text/day/23.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id23').src= 'assets/image/day/23.gif';"  />
+
+<area class="youtube" coords="3377,56,3588,171" shape="rect" href="http://www.youtube.com/embed/T3_V9NhUwPM" style="outline:none;" 
+onmouseover="if(document.images) document.getElementById('img_id23').src= 'assets/image/text/day/23centipede.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id23').src= 'assets/image/day/23.gif';"  />
+
+<map name="map24" id="img_id24">
+<area class="youtube" coords="2125,76,2363,258" shape="rect" href="http://www.youtube.com/embed/LaIJpVwKgZw" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id24').src= 'assets/image/text/day/24.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id24').src= 'assets/image/day/24.gif';"  />
+</map>
+
+<map name="map26" id="img_id26">
+<area class="youtube" coords="745,52,805,107" shape="rect" href="http://www.youtube.com/embed/ZBN-t9R3Szo" style="outline:none;"
+onmouseover="if(document.images) document.getElementById('img_id26').src= 'assets/image/text/day/26.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id26').src= 'assets/image/day/26.gif';"  />
+</map>
+
+<map name="map27" id="img_id27">
+<area class="youtube" coords="2467,147,2598,275" shape="rect" href="http://www.youtube.com/embed/exzFsi0-DFo" style="outline:none;" 
+onmouseover="if(document.images) document.getElementById('img_id27').src= 'assets/image/text/day/27.gif';" 
+onmouseout="if(document.images) document.getElementById('img_id27').src= 'assets/image/day/27.gif';"  />
+</map> 
+</div>
+
+
+<!-- <script type="text/javascript">
+$(document).ready(function() {
+        // Tooltip only Text
+        $('.masterTooltip').hover(function(){
+                // Hover over code
+                var title = $(this).attr('title');
+                $(this).data('tipText', title).removeAttr('title');
+                $('<p class="tooltip"></p>')
+                .text(title)
+                .appendTo('body')
+                .fadeIn('slow');
+        }, function() {
+                // Hover out code
+                $(this).attr('title', $(this).data('tipText'));
+                $('.tooltip').remove();
+        }).mousemove(function(e) {
+                var mousex = e.pageX -50; //Get X coordinates
+                var mousey = e.pageY +25; //Get Y coordinates
+                $('.tooltip')
+                .css({ top: mousey, left: mousex })
+        });
+});
+</script>  -->
+
+<script>
+function PlaySound(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.play();
+}
+
+function StopSound(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.pause();
+    thissound.currentTime = 0;
+}
+</script>
+
+<!-- audio files -->
+<audio id='02' src='wav/02.m4a'/>
+<audio id='05gwyn' src='wav/05gwyn.mp3'/>
+<audio id='05os' src='wav/05os.mp3'/>
+<audio id='05os-stop' src='wav/05os-stop.mp3'/>
+<audio id='05gwyn' src='wav/05gwyn.mp3'/>
+<audio id='solaire' src='wav/solaire.mp3'/>
+<audio id='solaire-stop' src='wav/solaire-stop.mp3'/>
+<audio id='giant' src='wav/giantblacksmith.mp3'/>
+
+<!-- Javascripts -->
+<script src="http://cdn.jsdelivr.net/emojione/1.3.0/lib/js/emojione.min.js"></script>
+<script src="./assets/js/script.js"></script>
+<script src="assets/js/jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+
+});
+</script> 
+
+</body>
+</html>
